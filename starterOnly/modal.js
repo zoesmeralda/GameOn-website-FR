@@ -19,7 +19,7 @@ const closeBtn = document.querySelector(".close");
 const mailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 const nameRegex = /(.*[a-z]){2,30}/;
 
-const matchRegex = formData.match(mailRegex,nameRegex);
+const matchRegex = formData.match(nameRegex);
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -29,14 +29,15 @@ function launchModal() {
 }
 //verif bouton radio
 
-function radio(radioBtn) {
-  let radioBtn = 0;
+function radio(radioB) {
+  let radioB = 0;
   let messageAlert = window.alert("veuillez selectionner au moins 1 bouton");
-  for (let i = 0; i < radioBtnn.options.length; i++) {
-    if (radioBtn = 0)
-  }
+  for (let i = 0; i < radioB.options.length; i++) {
+    if (radioB = 0)
+  
+  
   return messageAlert;
-}
+}}
 //close modal
 closeBtn.addEventListener("click", closeModal);
 //confirm submitForm
