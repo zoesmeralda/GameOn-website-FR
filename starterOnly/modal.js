@@ -14,26 +14,43 @@ const formData = document.querySelectorAll(".formData");
 const radioBtn = document.querySelectorAll(".checkbox-input");
 const submitForm = document.querySelector(".btn-submit");
 const closeBtn = document.querySelector(".close");
-//Regex
-
-const mailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-const nameRegex = /(.*[a-z]){2,30}/;
-
-const matchRegex = formData.match(nameRegex);
+const email = document.getElementById("email");
+const firstName = document.getElementById("first");
+const lastName = document.getElementById("last");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // launch modal form
 function launchModal() {
-  modalbg.style.display = "block";
+  modalbg.style.display = "block"
+
+}
+//Verification email
+function emailVerification() {
+	const mailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+	return mailRegex.test(email.value);}
+
+  
+// Verification firstname
+function firstVerification() {
+	let inputValue = firstName.value;
+	if (inputValue !== null && inputValue.length >= 2) return true;
+	else return false;
+}
+
+// Verification lastname
+function lastVerification() {
+	let inputValue = lastName.value;
+	if (inputValue !== null && inputValue.length >= 2) return true;
+	else return false;
 }
 //verif bouton radio
 
 function radio(radioB) {
-  let radioB = 0;
+  let radioBn = 0;
   let messageAlert = window.alert("veuillez selectionner au moins 1 bouton");
-  for (let i = 0; i < radioB.options.length; i++) {
-    if (radioB = 0)
+  for (let i = 0; i < radioBn.options.length; i++) {
+    if (radioB > 1)
   
   
   return messageAlert;
