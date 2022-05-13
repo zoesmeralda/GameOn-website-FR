@@ -62,10 +62,10 @@
               method="get"
               onsubmit="return validate();"
             >
-            <div class="formData" id="formData1" data-error="false" data-error-visible="false"></div>
-                <label>Prénom</label><br>
+            <div class="formData" >           
+             <label>Prénom</label><br>
                 <input
-                  class="text-control"
+                  class="text-control firstname"
                   type="text"
                   id="first"
                   name="first"
@@ -76,33 +76,38 @@
              <div class="formData" id="formData2" data-error="false" data-error-visible="false"></div>
                 <label for="last">Nom</label><br>
                 <input
-                  class="text-control"
+              
+                  class="text-control lastname"
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                />
+                <p class="error" id="errorName">Veuillez saisir au moins deux caractères</p><br>
               </div>
               <div class="formData" id="formData3" data-error="false" data-error-visible="false">
                 <label>E-mail</label><br>
                 <input
-                  class="text-control"
+                  class="text-control mailaddress"
                   type="email"
                   id="email"
                   name="email"
-                /><br>
+                /> 
+                <p class="error" id="errorMail">Veuillez entrer une adresse mail correcte</p><br>
               </div>
               <div class="formData" id="formData4" data-error="false" data-error-visible="false">
                 <label>Date de naissance</label><br>
                 <input
-                  class="text-control"
+                  class="text-control dateofbirth"
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                /><br>
+                />
+                <p class="error" id="errorDate">Veuillez saisir une date</p>
+                <br>
               </div>
               <div class="formData" id="formData5" data-error="false" data-error-visible="false">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <input type="number" class="text-control number" id="quantity" name="quantity" min="0" max="99">
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div class="formData" id="formData6" data-error="false" data-error-visible="false">
@@ -173,7 +178,7 @@
                   Portland</label
                 >
               </div>
-              <div class="formData" id="formData7" data-error="false" data-error-visible="false">
+              <div class="formData" id="formData7" data-error="true" data-error-visible="true">
                 <input
                   class="checkbox-input"
                   type="checkbox"

@@ -37,6 +37,7 @@ function launchModal() {
 }
 //close modal
 closeBtn.addEventListener("click", closeModal);
+
 // close modal function
 function closeModal() {
   modalbg.style.display = "none";
@@ -216,11 +217,11 @@ function confirmSubmit(e) {
   firstVerification(firstNameData);
   const lastNameData = document.querySelector(".lastname").value;
   lastVerification(lastNameData);
-  const mailData = document.querySelector(".mailadress").value;
+  const mailData = document.querySelector(".mailaddress").value;
   emailVerification(mailData);
   const dateData = document.querySelector(".dateofbirth").value;
   birthdateVerification(dateData);
-  const numberData = document.querySelector(".t-number").value;
+  const numberData = document.querySelector(".number").value;
   numberVerification(numberData);
   const radioData = document.querySelectorAll(".checkbox-input").value;
   radio();
@@ -229,16 +230,17 @@ function confirmSubmit(e) {
 
 //confirm submitForm
 submitForm.addEventListener("click", confirmSubmit);
+console.log("sub");
 
 
 //confirmation d'envoi du formulaire si conditions remplies et affichage du block de confirmation d'inscription
 
 
-if ((firstVerification) && (lastVerification) && (emailVerification) &&
-(birthdateVerification) && (numberVerification) && (radio) && (CGU)) {
+// if ((firstVerification) && (lastVerification) && (emailVerification) &&
+// (birthdateVerification) && (numberVerification) && (radio) && (CGU)) {
 
 modalbg2.style.display = "block";
-}
+// }
 
 }
 /*function confirmSubmit () {
