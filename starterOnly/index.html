@@ -62,8 +62,7 @@
               method="get"
               onsubmit="return validate();"
             >
-              <div
-                class="formData">
+            <div class="formData" id="formData1" data-error="false" data-error-visible="false"></div>
                 <label>Prénom</label><br>
                 <input
                   class="text-control"
@@ -73,9 +72,9 @@
                   minlength="2"
                 /><br>
               </div>
-              <div
-                class="formData">
-                <label>Nom</label><br>
+              
+             <div class="formData" id="formData2" data-error="false" data-error-visible="false"></div>
+                <label for="last">Nom</label><br>
                 <input
                   class="text-control"
                   type="text"
@@ -83,8 +82,7 @@
                   name="last"
                 /><br>
               </div>
-              <div
-                class="formData">
+              <div class="formData" id="formData3" data-error="false" data-error-visible="false">
                 <label>E-mail</label><br>
                 <input
                   class="text-control"
@@ -93,8 +91,7 @@
                   name="email"
                 /><br>
               </div>
-              <div
-                class="formData">
+              <div class="formData" id="formData4" data-error="false" data-error-visible="false">
                 <label>Date de naissance</label><br>
                 <input
                   class="text-control"
@@ -103,14 +100,12 @@
                   name="birthdate"
                 /><br>
               </div>
-              <div
-                class="formData">
+              <div class="formData" id="formData5" data-error="false" data-error-visible="false">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
-              <div
-                class="formData">
+              <div class="formData" id="formData6" data-error="false" data-error-visible="false">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -178,9 +173,7 @@
                   Portland</label
                 >
               </div>
-
-              <div
-                class="formData">
+              <div class="formData" id="formData7" data-error="false" data-error-visible="false">
                 <input
                   class="checkbox-input"
                   type="checkbox"
@@ -209,6 +202,16 @@
           </div>
         </div>
       </div>
+      
+    <div class="bground2">
+      <div class="content2">
+        <button class="close close-reset" type="button"></button>
+        <div class="text_container">
+          <p class="thanks">Merci pour <br> votre inscription</p>
+        </div>
+        <input class="btn-exit" type="reset" class="button" value="Fermer" />
+      </div>
+    </div>
     </main>
     <footer>
       <p class="copyrights">

@@ -157,7 +157,8 @@ main {
   font-size: 16px;
 }
 
-.bground {
+.bground,
+.bground2 {
   display: none;
   position: fixed;
   z-index: 1;
@@ -169,7 +170,8 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
-.content {
+.content,
+.content2 {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
@@ -181,6 +183,21 @@ main {
   position: relative;
   color: #fff;
   padding-top: 10px;
+}
+
+.content2 {
+  height: 700px;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+
+.text_container {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .modal-body {
