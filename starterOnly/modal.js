@@ -18,14 +18,6 @@ const closeBtn = document.querySelector(".close");
 const email = document.getElementById("email");
 const firstName = document.getElementById("first");
 const lastName = document.getElementById("last");
-const dob = document.getElementById("birthdate");
-const checkbox1 = document.getElementById("location1");
-const checkbox2 = document.getElementById("location2");
-const checkbox3 = document.getElementById("location3");
-const checkbox4 = document.getElementById("location4");
-const checkbox5 = document.getElementById("location5");
-const checkbox6 = document.getElementById("location6");
-const checkboxCgu = document.getElementById("checkbox2-label");
 
 
 let rightFirstName;
@@ -33,8 +25,8 @@ let rightLastName;
 let rightEmail;
 let rightDate;
 let rightNumber;
-let rightRadio;
-let ;
+let radioChecked;
+let CGUChecked;
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -42,6 +34,12 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 function launchModal() {
   modalbg.style.display = "block"
 
+}
+//close modal
+closeBtn.addEventListener("click", closeModal);
+// close modal function
+function closeModal() {
+  modalbg.style.display = "none";
 }
 //Verification email
 
@@ -52,7 +50,7 @@ function emailVerification(myEmail) {
     document.getElementById("formData3").setAttribute("data-error", "false");
     document.getElementById("formData3").setAttribute("data-error-visible", "false");
   } else {
-    righteMail = false;
+    rightEmail = false;
     document.getElementById("formData3").setAttribute("data-error", "Veuillez saisir une adresse e-mail valide");
     document.getElementById("formData3").setAttribute("data-error-visible", "true");
   }
@@ -228,16 +226,12 @@ function confirmSubmit(e) {
   radio();
   const CGUData = document.querySelectorAll(".checkbox-input").value;
   CGU()
-//close modal
-closeBtn.addEventListener("click", closeModal);
+
 //confirm submitForm
 submitForm.addEventListener("click", confirmSubmit);
 
-// close modal function
-function closeModal() {
-  modalbg.style.display = "none";
-}
-//confirmation d'envoi du formulaire
+
+//confirmation d'envoi du formulaire si conditions remplies et affichage du block de confirmation d'inscription
 
 
 if ((firstVerification) && (lastVerification) && (emailVerification) &&

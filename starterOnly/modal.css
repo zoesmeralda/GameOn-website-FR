@@ -173,6 +173,7 @@ main {
 .content,
 .content2 {
   margin: 5% auto;
+  margin-top: 75px;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -186,14 +187,14 @@ main {
 }
 
 .content2 {
-  height: 700px;
+  height: 750px;
   font-size: 2rem;
   font-weight: normal;
 }
 
 
 .text_container {
-  height: 600px;
+  height: 670px;
   display: flex;
   justify-content: center;
   align-items: center;
