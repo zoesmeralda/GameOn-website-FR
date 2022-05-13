@@ -242,7 +242,7 @@ function closeModal() {
 
 if ((firstVerification) && (lastVerification) && (emailVerification) &&
 (birthdateVerification) && (numberVerification) && (radio) && (CGU)) {
-modalbg.style.display = "none";
+
 modalbg2.style.display = "block";
 }
 
