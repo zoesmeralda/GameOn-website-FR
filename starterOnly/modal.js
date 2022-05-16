@@ -278,9 +278,9 @@ function confirmSubmit(e) {
   const numberData = document.querySelector(".number").value;
   numberVerification(numberData);
   const radioData = document.querySelectorAll(".checkbox-input").value;
-  radio();
+  radio(radioData);
   const CGUData = document.querySelectorAll(".checkbox-input").value;
-  CGU();
+  CGU(CGUData);
 
   //confirmation d'envoi du formulaire si conditions remplies et affichage du block de confirmation d'inscription
 
@@ -288,12 +288,12 @@ function confirmSubmit(e) {
   // Regarde dans la fonction firstVerification, j'ai ajouté un return de la valeur (sinon ton if sera toujours vrai)
   if (
     firstVerification(firstNameData) &&
-    lastVerification &&
-    emailVerification &&
-    birthdateVerification &&
-    numberVerification &&
-    radio &&
-    CGU
+    lastVerification(lastNameData) &&
+    emailVerification(mailData) &&
+    birthdateVerification(dateData) &&
+    numberVerification(numberData) &&
+    radio(radioData)&&
+    CGU(CGUData)
   ) {
     modalbg2.style.display = "block";
   }
