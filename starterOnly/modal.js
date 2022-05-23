@@ -43,7 +43,9 @@ function closeModal() {
 //Verification email
 
 function emailVerification(myEmail) {
+  rightEmail = true;
   console.log("email check");
+
   if (myEmail.match(/^[a-zA-Z0-9_+\.]+@[a-zA-Z0-9]+\.[a-z]+$/)) {
     rightEmail = true;
     document.getElementById("formData3").setAttribute("data-error", "false");
@@ -59,6 +61,7 @@ function emailVerification(myEmail) {
       .getElementById("formData3")
       .setAttribute("data-error-visible", "true");
   }
+  return rightEmail;
 }
 
 /*function emailVerification() {
@@ -286,6 +289,15 @@ function confirmSubmit(e) {
 
   // TODO: faire pareil pour les autres fonctions appelées dans le if
   // Regarde dans la fonction firstVerification, j'ai ajouté un return de la valeur (sinon ton if sera toujours vrai)
+  console.log("");
+
+  console.log(" firstVerification(firstNameData)" ,    firstVerification(firstNameData)); 
+   console.log("lastVerification(lastNameData)", lastVerification(lastNameData));
+     console.log(" emailVerification(mailData)",  emailVerification(mailData)); 
+      console.log("birthdateVerification(dateData)", birthdateVerification(dateData));
+        console.log("numberVerification(numberData)", numberVerification(numberData));
+          console.log("numberVerification(numberData)", numberVerification(numberData));
+          console.log("CGU(CGUData)", CGU(CGUData));
   if (
     firstVerification(firstNameData) &&
     lastVerification(lastNameData) &&
